@@ -1,9 +1,15 @@
 # This is a simple temperature conversion tool
 # Created using what I learnt about functions
 
-def temperature_converter(unit_1, unit_2, temp):
+def temperature_converter(unit_1, unit_2, input_temp):
     '''
     This is a simple temperature converter that can convert between Kelvin, Celsius and Fahrenheit.
+
+    temperature_converter(unit_1, unit_2, temp)
+    units must be in 'single quotes' or "double quotes" to be recognised by python as strings
+
+    Program first converts input temperature to Kelvin
+    Then converts to second unit from Kelvin
 
     Example
     -------
@@ -11,11 +17,11 @@ def temperature_converter(unit_1, unit_2, temp):
     19.444444444444457
     '''
     if unit_1 == 'F':
-        kelvin = fahr_to_kelvin(temp)
+        kelvin = fahr_to_kelvin(input_temp)
     if unit_1 == 'C':
-        kelvin = celsius_to_kelvin(temp)
+        kelvin = celsius_to_kelvin(input_temp)
     if unit_1 == 'K':
-        kelvin = temp
+        kelvin = input_temp
     if unit_2 == 'K':
         return kelvin
     if unit_2 == 'C':
@@ -39,4 +45,4 @@ def kelvin_to_celsius(temp_k):
 def kelvin_to_fahr(temp_k):
     return (temp_k - 273.15) * 9 / 5 + 32
 
-print(temperature_converter('F', 'C', 67))
+
