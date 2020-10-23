@@ -1,3 +1,6 @@
+# This is a simple temperature conversion tool
+# Created using what I learnt about functions
+
 def temperature_converter(unit_1, unit_2, temp):
     '''
     This is a simple temperature converter that can convert between Kelvin, Celsius and Fahrenheit.
