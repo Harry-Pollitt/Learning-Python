@@ -1,5 +1,10 @@
 # This is a simple temperature conversion tool
 # Created using what I learnt about functions
+import sys
+
+u1 = str(sys.argv[1])
+u2 = str(sys.argv[2])
+it = float(sys.argv[3])
 
 def temperature_converter(unit_1, unit_2, input_temp):
     '''
@@ -45,4 +50,4 @@ def kelvin_to_celsius(temp_k):
 def kelvin_to_fahr(temp_k):
     return (temp_k - 273.15) * 9 / 5 + 32
 
-
+print(temperature_converter(u1, u2, it))
